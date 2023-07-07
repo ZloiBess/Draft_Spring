@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:spaceValuesForPerson.properties,
+                                            classpath:spaceValuesForPet.properties" />
+
+
+    <bean id="dog" class="org.example.component.Dog">
+        <constructor-arg name="name" value="${pet.dog.name}"/>
+    </bean>
+
+    <bean id="cat" class="org.example.component.Cat">
+        <constructor-arg name="name" value="${pet.cat.name}"/>
+    </bean>
+
+    <bean id="personAndCat" class="org.example.component.Person">
+        <constructor-arg name="name" value="${person.cat.name}"/>
+        <constructor-arg name="age" value="${person.cat.age}"/>
+        <property name="notes" value="${person.cat.notes}"/>
+        <property name="pet" ref="cat"/>
+    </bean>
+
+    <bean id="personAndDog" class="org.example.component.Person">
+        <constructor-arg name="name" value="${person.dog.name}"/>
+        <constructor-arg name="age" value="${person.dog.age}"/>
+        <property name="notes" value="${person.dog.notes}"/>
+        <property name="pet" ref="dog"/>
+    </bean>
+</beans>
