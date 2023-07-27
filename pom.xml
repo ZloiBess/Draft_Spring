@@ -5,13 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>testSpring</artifactId>
-    <groupId>org.exe</groupId>
+    <groupId>org.example</groupId>
     <version>1.0</version>
 
     <packaging>pom</packaging>
     <modules>
-        <module>springXmlAndAnnotationContext</module>
-        <module>springXmlContext</module>
+        <module>springXmlAndAnnotationConfiguration</module>
+        <module>springXmlConfiguration</module>
+        <module>springJavaConfiguration</module>
+        <module>springMVC</module>
+        <module>springMvcJavaConfig</module>
+        <module>firstDemoProject</module>
     </modules>
 
     <properties>
@@ -21,6 +25,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>6.0.9</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -35,5 +45,6 @@
         </dependency>
 
     </dependencies>
+
 
 </project>
