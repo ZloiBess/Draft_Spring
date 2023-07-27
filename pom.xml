@@ -16,6 +16,7 @@
         <module>springMVC</module>
         <module>springMvcJavaConfig</module>
         <module>firstDemoProject</module>
+        <module>springB_downloadImage</module>
     </modules>
 
     <properties>

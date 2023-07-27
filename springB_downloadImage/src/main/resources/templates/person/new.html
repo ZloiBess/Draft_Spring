@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleafe.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/people}" th:object="${person}" enctype="multipart/form-data">
+
+    <label for="name">Enter name:</label>
+    <input type="text" th:field="*{name}" id="name">
+    <br/>
+    <br/>
+
+    <input type="file" name="file"/>
+    <br/>
+    <br/>
+    <input type="submit" value="Create!">
+
+</form>
+
+
+</body>
+</html>
